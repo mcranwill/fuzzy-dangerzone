@@ -1,0 +1,300 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F3A08B6B16AEECB100ABA825 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3A08B6A16AEECB100ABA825 /* UIKit.framework */; };
+		F3A08B6D16AEECB100ABA825 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3A08B6C16AEECB100ABA825 /* Foundation.framework */; };
+		F3A08B6F16AEECB100ABA825 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3A08B6E16AEECB100ABA825 /* CoreGraphics.framework */; };
+		F3A08B7516AEECB100ABA825 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F3A08B7316AEECB100ABA825 /* InfoPlist.strings */; };
+		F3A08B7716AEECB100ABA825 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A08B7616AEECB100ABA825 /* main.m */; };
+		F3A08B7B16AEECB100ABA825 /* HelloTask1AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A08B7A16AEECB100ABA825 /* HelloTask1AppDelegate.m */; };
+		F3A08B7D16AEECB200ABA825 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F3A08B7C16AEECB200ABA825 /* Default.png */; };
+		F3A08B7F16AEECB200ABA825 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F3A08B7E16AEECB200ABA825 /* Default@2x.png */; };
+		F3A08B8116AEECB200ABA825 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F3A08B8016AEECB200ABA825 /* Default-568h@2x.png */; };
+		F3A08B8416AEECB200ABA825 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3A08B8216AEECB200ABA825 /* MainStoryboard.storyboard */; };
+		F3A08B8716AEECB200ABA825 /* HelloTask1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A08B8616AEECB200ABA825 /* HelloTask1ViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F3A08B6616AEECB100ABA825 /* HelloTask1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloTask1.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3A08B6A16AEECB100ABA825 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F3A08B6C16AEECB100ABA825 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F3A08B6E16AEECB100ABA825 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F3A08B7216AEECB100ABA825 /* HelloTask1-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HelloTask1-Info.plist"; sourceTree = "<group>"; };
+		F3A08B7416AEECB100ABA825 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F3A08B7616AEECB100ABA825 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F3A08B7816AEECB100ABA825 /* HelloTask1-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HelloTask1-Prefix.pch"; sourceTree = "<group>"; };
+		F3A08B7916AEECB100ABA825 /* HelloTask1AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloTask1AppDelegate.h; sourceTree = "<group>"; };
+		F3A08B7A16AEECB100ABA825 /* HelloTask1AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloTask1AppDelegate.m; sourceTree = "<group>"; };
+		F3A08B7C16AEECB200ABA825 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		F3A08B7E16AEECB200ABA825 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		F3A08B8016AEECB200ABA825 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		F3A08B8316AEECB200ABA825 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		F3A08B8516AEECB200ABA825 /* HelloTask1ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloTask1ViewController.h; sourceTree = "<group>"; };
+		F3A08B8616AEECB200ABA825 /* HelloTask1ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloTask1ViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F3A08B6316AEECB100ABA825 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3A08B6B16AEECB100ABA825 /* UIKit.framework in Frameworks */,
+				F3A08B6D16AEECB100ABA825 /* Foundation.framework in Frameworks */,
+				F3A08B6F16AEECB100ABA825 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F3A08B5B16AEECB100ABA825 = {
+			isa = PBXGroup;
+			children = (
+				F3A08B7016AEECB100ABA825 /* HelloTask1 */,
+				F3A08B6916AEECB100ABA825 /* Frameworks */,
+				F3A08B6716AEECB100ABA825 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F3A08B6716AEECB100ABA825 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F3A08B6616AEECB100ABA825 /* HelloTask1.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F3A08B6916AEECB100ABA825 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F3A08B6A16AEECB100ABA825 /* UIKit.framework */,
+				F3A08B6C16AEECB100ABA825 /* Foundation.framework */,
+				F3A08B6E16AEECB100ABA825 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F3A08B7016AEECB100ABA825 /* HelloTask1 */ = {
+			isa = PBXGroup;
+			children = (
+				F3A08B7916AEECB100ABA825 /* HelloTask1AppDelegate.h */,
+				F3A08B7A16AEECB100ABA825 /* HelloTask1AppDelegate.m */,
+				F3A08B8216AEECB200ABA825 /* MainStoryboard.storyboard */,
+				F3A08B8516AEECB200ABA825 /* HelloTask1ViewController.h */,
+				F3A08B8616AEECB200ABA825 /* HelloTask1ViewController.m */,
+				F3A08B7116AEECB100ABA825 /* Supporting Files */,
+			);
+			path = HelloTask1;
+			sourceTree = "<group>";
+		};
+		F3A08B7116AEECB100ABA825 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F3A08B7216AEECB100ABA825 /* HelloTask1-Info.plist */,
+				F3A08B7316AEECB100ABA825 /* InfoPlist.strings */,
+				F3A08B7616AEECB100ABA825 /* main.m */,
+				F3A08B7816AEECB100ABA825 /* HelloTask1-Prefix.pch */,
+				F3A08B7C16AEECB200ABA825 /* Default.png */,
+				F3A08B7E16AEECB200ABA825 /* Default@2x.png */,
+				F3A08B8016AEECB200ABA825 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F3A08B6516AEECB100ABA825 /* HelloTask1 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3A08B8A16AEECB200ABA825 /* Build configuration list for PBXNativeTarget "HelloTask1" */;
+			buildPhases = (
+				F3A08B6216AEECB100ABA825 /* Sources */,
+				F3A08B6316AEECB100ABA825 /* Frameworks */,
+				F3A08B6416AEECB100ABA825 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HelloTask1;
+			productName = HelloTask1;
+			productReference = F3A08B6616AEECB100ABA825 /* HelloTask1.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F3A08B5D16AEECB100ABA825 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = HelloTask1;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = edu.self;
+			};
+			buildConfigurationList = F3A08B6016AEECB100ABA825 /* Build configuration list for PBXProject "HelloTask1" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F3A08B5B16AEECB100ABA825;
+			productRefGroup = F3A08B6716AEECB100ABA825 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F3A08B6516AEECB100ABA825 /* HelloTask1 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F3A08B6416AEECB100ABA825 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3A08B7516AEECB100ABA825 /* InfoPlist.strings in Resources */,
+				F3A08B7D16AEECB200ABA825 /* Default.png in Resources */,
+				F3A08B7F16AEECB200ABA825 /* Default@2x.png in Resources */,
+				F3A08B8116AEECB200ABA825 /* Default-568h@2x.png in Resources */,
+				F3A08B8416AEECB200ABA825 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F3A08B6216AEECB100ABA825 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3A08B7716AEECB100ABA825 /* main.m in Sources */,
+				F3A08B7B16AEECB100ABA825 /* HelloTask1AppDelegate.m in Sources */,
+				F3A08B8716AEECB200ABA825 /* HelloTask1ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F3A08B7316AEECB100ABA825 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3A08B7416AEECB100ABA825 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F3A08B8216AEECB200ABA825 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3A08B8316AEECB200ABA825 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F3A08B8816AEECB200ABA825 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F3A08B8916AEECB200ABA825 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F3A08B8B16AEECB200ABA825 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HelloTask1/HelloTask1-Prefix.pch";
+				INFOPLIST_FILE = "HelloTask1/HelloTask1-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F3A08B8C16AEECB200ABA825 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HelloTask1/HelloTask1-Prefix.pch";
+				INFOPLIST_FILE = "HelloTask1/HelloTask1-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F3A08B6016AEECB100ABA825 /* Build configuration list for PBXProject "HelloTask1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3A08B8816AEECB200ABA825 /* Debug */,
+				F3A08B8916AEECB200ABA825 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3A08B8A16AEECB200ABA825 /* Build configuration list for PBXNativeTarget "HelloTask1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3A08B8B16AEECB200ABA825 /* Debug */,
+				F3A08B8C16AEECB200ABA825 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F3A08B5D16AEECB100ABA825 /* Project object */;
+}
