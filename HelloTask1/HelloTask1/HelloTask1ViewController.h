@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HelloTask1ViewController : UIViewController
-
+@interface HelloTask1ViewController : UIViewController <UITextFieldDelegate>
+//@interface HelloTask1AppDelegate : UIResponder <UIApplicationDelegate>
+@property (copy, nonatomic) NSString *userName;
 @end
