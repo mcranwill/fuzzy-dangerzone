@@ -10,7 +10,7 @@
 
 @implementation TaskObj
 
--(id) initWithText:(NSString *)text {
+-(id) initWithText:(NSAttributedString *)text {
     self = [super init ];
     
     if (self) {

@@ -15,4 +15,5 @@
 - (NSUInteger)countOfList;
 - (TaskObj *)objectInListAtIndex:(NSUInteger)theIndex;
 - (void)addTaskWithText:(TaskObj *)task;
+- (void) removeObjectAtIndex:(NSUInteger) theIndex;
 @end

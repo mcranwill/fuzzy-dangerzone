@@ -18,16 +18,20 @@
 - (void)initializeDefaultDataList {
     NSMutableArray *taskList = [[NSMutableArray alloc] init];
     self.masterTaskList = taskList;
-    TaskObj *task;
+    //TaskObj *task;
     //NSDate *today = [NSDate date];
-    task = [[TaskObj alloc] initWithText:@"Clean Clothes" ];
-    [self addTaskWithText:task];
+    //task = [[TaskObj alloc] initWithText:@"Clean Clothes" ];
+    //[self addTaskWithText:task];
 }
 
 - (void)setMasterTaskList:(NSMutableArray *)newList {
     if (_masterTaskList != newList) {
         _masterTaskList = [newList mutableCopy];
     }
+}
+
+- (void) removeObjectAtIndex:(NSUInteger)theIndex {
+    [self.masterTaskList removeObjectAtIndex:theIndex];
 }
 
 - (id)init {

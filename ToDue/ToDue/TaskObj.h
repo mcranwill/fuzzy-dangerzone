@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface TaskObj : NSObject
-@property (nonatomic, copy) NSString *text;
-- (id) initWithText:(NSString *)text;
+@property (nonatomic, copy) NSAttributedString *text;
+- (id) initWithText:(NSAttributedString *)text;
 
 @end
