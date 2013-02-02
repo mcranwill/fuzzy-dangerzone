@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class TaskListDataController;
 
 @interface TaskMasterViewController : UITableViewController
-
+@property (strong, nonatomic) TaskListDataController *dataController;
+- (IBAction)done:(UIStoryboardSegue *)segue;
+- (IBAction)cancel:(UIStoryboardSegue *)segue;
 @end
