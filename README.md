@@ -6,6 +6,33 @@ CS-705 : Mobile App Development on the iPhone.
 
 Tasks for Phase 1 of the class
 
+    Task 3
+    The application allows users to add and remove tasks as they accomplish them.
+    
+    A high level description of how I replicated the functionality of the app
+        
+                Step 1: Adding Elements
+        I started by implementing adding elements from an external add screen
+        which accepts user text input.  The add screen then pushes the text
+        to the data controller which creates a new instance of the TaskObj class
+        in the middle of a 'done' segue.
+        The TaskObj instance is then pushed to the master list of TaskObjs and the
+        tableView is then reloaded.
+                Step 2: Deleting Elements
+        Next, I enabled editing of elements using the built in editButtonItem's
+        functionality.  In the dataController, I implemented a removeObjectAtIndex 
+        method which made it possible to access and update the master list of 
+        TaskObjs. Using the commitEditingStyle method, I deleted the appropriate
+        objects from both the master list and the tableView if the proper
+        editingStyle (UITableViewCellEditingStyleDelete) was specified.
+                Step 3: Changing the Style of Elements
+        My next logical step was to be able to change the look of the elements in
+        the Master View List.  So I switched the references in the TaskObj from
+        NSString to NSAttributedString which as of iOS 6 supports strikethrough,
+        text color, and underline natively.  I found this on a few stackOverflow
+        posts as I was searching for how to deal with other problems that arose.
+        
+    
     Task 2
     The application allows users to view and add to a list of bird sightings that
     they have witnessed.  The application demonstrates creating a new model 
