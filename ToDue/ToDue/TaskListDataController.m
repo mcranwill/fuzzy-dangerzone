@@ -30,8 +30,23 @@
     }
 }
 
+- (NSMutableAttributedString *) updateAttrText:(NSUInteger)theIndex {
+    TaskObj *temptoUpdate = [self.masterTaskList objectAtIndex:theIndex];
+    
+    NSMutableAttributedString *temp = [[NSMutableAttributedString alloc] initWithString:temptoUpdate.text.string attributes:@{ NSForegroundColorAttributeName : [UIColor redColor]}];
+    [temp addAttribute:NSStrikethroughStyleAttributeName value:[NSNumber numberWithInt:2] range:NSMakeRange(0, temp.length)];
+    return temp;
+}
+
 - (void) removeObjectAtIndex:(NSUInteger)theIndex {
     [self.masterTaskList removeObjectAtIndex:theIndex];
+}
+
+- (BOOL) isHighlighted:(NSUInteger)theIndex {
+ //   TaskObj *temp = [self.masterTaskList objectAtIndex:theIndex];
+//    NSString *a =[temp.text attribute:NSStrikethroughStyleAttributeName atIndex:0 effectiveRange:NULL];
+//    if (a )
+    return true;
 }
 
 - (id)init {

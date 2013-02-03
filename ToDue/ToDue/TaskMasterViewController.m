@@ -68,11 +68,21 @@
     [super setEditing:editing animated:animated];
 }
 
-/*- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete){
-        [self.dataController]
-    }
-}*/
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"TaskListCell";
+    
+    TaskObj *taskAtIndex = [self.dataController objectInListAtIndex:indexPath.row];
+    //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    NSMutableAttributedString *s =[self.dataController updateAttrText:indexPath.row];
+    taskAtIndex.text = s;
+    [[cell textLabel] setAttributedText:taskAtIndex.text];
+    
+    
+    
+}
 
 #pragma mark - Table View
 

@@ -36,7 +36,8 @@
         if ([self.taskText.text length] ) {
             TaskObj *task1;
            // NSDate *today = [NSDate date];
-            NSAttributedString *temp = [[NSAttributedString alloc] initWithString:self.taskText.text attributes:@{ NSFontAttributeName : [UIFont fontWithName:@"Noteworthy-Bold" size:36], NSUnderlineStyleAttributeName : @1 , NSStrokeColorAttributeName : [UIColor blackColor]}];
+            NSMutableAttributedString *temp = [[NSMutableAttributedString alloc] initWithString:self.taskText.text attributes:@{ NSFontAttributeName : [UIFont fontWithName:@"Noteworthy-Bold" size:16]}];
+            
             task1 = [[TaskObj alloc] initWithText:temp ];
             self.task = task1;
         }
