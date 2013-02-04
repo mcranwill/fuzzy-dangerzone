@@ -35,10 +35,9 @@
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     // paths[0];
     NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSString *archivePath = [documentsDirectory stringByAppendingPathComponent:@"data.plist"];
-    NSString *plistPath = [documentsDirectory stringByAppendingPathComponent:@"data.plist"];
+    NSString *archivePath = [documentsDirectory stringByAppendingPathComponent:@"data.tlist"];
 
-    if ([fileManager fileExistsAtPath:plistPath] == YES)
+    if ([fileManager fileExistsAtPath:archivePath] == YES)
     {
         //Decode
         NSData *data = [NSData dataWithContentsOfFile:archivePath];
@@ -60,10 +59,9 @@
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     // paths[0];
     NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSString *archivePath = [documentsDirectory stringByAppendingPathComponent:@"data.plist"];
+    NSString *archivePath = [documentsDirectory stringByAppendingPathComponent:@"data.tlist"];
     
     NSMutableData *data = [NSMutableData data];
-    
     
     TaskObj *each;
     NSMutableString *temp = [[NSMutableString alloc] init];
@@ -73,7 +71,6 @@
     for (each in self.dataController.masterTaskList) {
         [temp appendString:@"1"];
         [archiver encodeObject:each forKey: temp];
-        
     }
     [archiver finishEncoding];
     BOOL success = [data writeToFile:archivePath atomically:YES];
@@ -87,7 +84,6 @@
 - (IBAction)done:(UIStoryboardSegue *)segue
 {
     if ([[segue identifier] isEqualToString:@"ReturnInput"]) {
-        
         AddTaskViewController *addController = [segue sourceViewController];
         if (addController.task) {
             [self.dataController addTaskWithText:addController.task];
