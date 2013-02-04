@@ -11,5 +11,6 @@
 @interface TaskObj : NSObject
 @property (nonatomic, copy) NSMutableAttributedString *text;
 - (id) initWithText:(NSMutableAttributedString *)text;
-
+-(id)initWithCoder:(NSKeyedUnarchiver *)aDecoder;
+-(void)encodeWithCoder:(NSCoder *)aCoder;
 @end

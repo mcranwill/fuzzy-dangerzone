@@ -32,18 +32,50 @@
 
 - (NSMutableAttributedString *) updateAttrText:(NSUInteger)theIndex {
     TaskObj *temptoUpdate = [self.masterTaskList objectAtIndex:theIndex];
+    NSMutableAttributedString *temp = [[NSMutableAttributedString alloc] initWithString:temptoUpdate.text.string ];
+   // NSString *test = NSForegroundColorAttributeName;
     
-    NSMutableAttributedString *temp = [[NSMutableAttributedString alloc] initWithString:temptoUpdate.text.string attributes:@{ NSForegroundColorAttributeName : [UIColor redColor]}];
-    [temp addAttribute:NSStrikethroughStyleAttributeName value:[NSNumber numberWithInt:2] range:NSMakeRange(0, temp.length)];
+    if([self isMarkedAsFinished:theIndex]){
+        [temp addAttribute:NSForegroundColorAttributeName value:[UIColor blackColor] range:NSMakeRange(0, temp.length)];
+        [temp addAttribute:NSStrikethroughStyleAttributeName
+                     value:[NSNumber numberWithInt:0]
+                     range:NSMakeRange(0, temp.length)];
+    }else  {
+        [temp addAttribute:NSForegroundColorAttributeName
+                     value:[UIColor redColor]
+                     range:NSMakeRange(0, temp.length)];
+        [temp addAttribute:NSStrikethroughStyleAttributeName
+                     value:[NSNumber numberWithInt:2]
+                     range:NSMakeRange(0, temp.length)];
+    }
     return temp;
+}
+
+- (NSMutableDictionary *) nsDictionaryCopyofMasterTaskList
+{
+    id objInstance;
+    NSUInteger indexKey = 0;
+    
+    NSMutableDictionary *mutableDictionary = [[NSMutableDictionary alloc] init];
+    for (objInstance in self.masterTaskList)
+        [mutableDictionary setObject:objInstance forKey:[NSNumber numberWithUnsignedInt:indexKey++]];
+    
+    return mutableDictionary;
 }
 
 - (void) removeObjectAtIndex:(NSUInteger)theIndex {
     [self.masterTaskList removeObjectAtIndex:theIndex];
 }
 
-- (BOOL) isHighlighted:(NSUInteger)theIndex {
- //   TaskObj *temp = [self.masterTaskList objectAtIndex:theIndex];
+- (BOOL) isMarkedAsFinished:(NSUInteger)theIndex {
+    TaskObj *temp = [self.masterTaskList objectAtIndex:theIndex];
+    UIColor *attributeValue = [temp.text attribute:NSForegroundColorAttributeName atIndex:0 effectiveRange:NULL];
+    if( attributeValue ==[UIColor redColor]){
+        return true;
+    }else {
+        return false;
+    }
+    // id attributeValue = [temp.text attribute:@"NSForegroundColorAttributeName" atIndex:0 effectiveRange:NULL];
 //    NSString *a =[temp.text attribute:NSStrikethroughStyleAttributeName atIndex:0 effectiveRange:NULL];
 //    if (a )
     return true;

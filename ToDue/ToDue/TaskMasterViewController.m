@@ -28,8 +28,60 @@
 	// Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
-    //UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-   //self.navigationItem.rightBarButtonItem = addButton;
+    UIApplication *app = [UIApplication sharedApplication];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidEnterBackground:) name:UIApplicationDidEnterBackgroundNotification object:app];
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    // paths[0];
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *archivePath = [documentsDirectory stringByAppendingPathComponent:@"data.plist"];
+    NSString *plistPath = [documentsDirectory stringByAppendingPathComponent:@"data.plist"];
+
+    if ([fileManager fileExistsAtPath:plistPath] == YES)
+    {
+        //Decode
+        NSData *data = [NSData dataWithContentsOfFile:archivePath];
+        NSKeyedUnarchiver *unarchiver = [[NSKeyedUnarchiver alloc] initForReadingWithData:data];
+        
+        NSMutableString *temp = [[NSMutableString alloc] init];
+        [temp appendString:@"key1"];
+        while ([unarchiver containsValueForKey:temp]) {
+            TaskObj *temporaryTask =[[TaskObj alloc] init];
+            temporaryTask = [unarchiver decodeObjectForKey:temp];
+            [self.dataController addTaskWithText:[unarchiver decodeObjectForKey:temp]];
+            [temp appendString:@"1"];
+        }
+    }
+}
+
+- (void)applicationDidEnterBackground:(NSNotification *)notification {
+    NSLog(@"Entering Background");
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    // paths[0];
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *archivePath = [documentsDirectory stringByAppendingPathComponent:@"data.plist"];
+    
+    NSMutableData *data = [NSMutableData data];
+    
+    
+    TaskObj *each;
+    NSMutableString *temp = [[NSMutableString alloc] init];
+    [temp appendString:@"key"];
+    
+    NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:data];
+    for (each in self.dataController.masterTaskList) {
+        [temp appendString:@"1"];
+        [archiver encodeObject:each forKey: temp];
+        
+    }
+    [archiver finishEncoding];
+    BOOL success = [data writeToFile:archivePath atomically:YES];
+    if (success) {
+        NSLog(@"printed successfully");
+    }else {
+        NSLog(@"something failed");
+    }
 }
 
 - (IBAction)done:(UIStoryboardSegue *)segue
@@ -75,13 +127,14 @@
     TaskObj *taskAtIndex = [self.dataController objectInListAtIndex:indexPath.row];
     //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    if([self.dataController isMarkedAsFinished:indexPath.row]){
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }else{
     cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }
     NSMutableAttributedString *s =[self.dataController updateAttrText:indexPath.row];
     taskAtIndex.text = s;
-    [[cell textLabel] setAttributedText:taskAtIndex.text];
-    
-    
-    
+    [[cell textLabel] setAttributedText:s];
 }
 
 #pragma mark - Table View
@@ -106,7 +159,8 @@
         [formatter setDateStyle:NSDateFormatterMediumStyle];
     }
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
+   //UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    cell.accessoryType = UITableViewCellAccessoryNone;
     TaskObj *taskAtIndex = [self.dataController objectInListAtIndex:indexPath.row];
     //[[cell textLabel] setText:taskAtIndex.text.string];
     [[cell textLabel] setAttributedText:taskAtIndex.text];

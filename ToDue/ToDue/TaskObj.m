@@ -19,4 +19,24 @@
     }
     return nil;
 }
+
+-(void)encodeWithCoder:(NSCoder *)aCoder {
+    [aCoder encodeObject:_text forKey:@"theText"];
+}
+
+/*-(id)initWithCoder:(NSCoder *)aDecoder {
+    if ((self = [super init])) {
+        theText = [aDecoder decodeObjectForKey:@"theText"];
+    }
+    return self;
+}*/
+
+-(id)initWithCoder:(NSKeyedUnarchiver *)aDecoder
+{
+    if ((self = [super init])) {
+        [self setText:[aDecoder decodeObjectForKey:@"theText"]];
+     //   [self setText:[aDecoder decodeObjectForKey:@"theText"]];
+    }
+    return self;
+}
 @end

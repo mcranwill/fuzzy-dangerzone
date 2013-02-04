@@ -16,6 +16,7 @@
 - (TaskObj *)objectInListAtIndex:(NSUInteger)theIndex;
 - (void)addTaskWithText:(TaskObj *)task;
 - (void) removeObjectAtIndex:(NSUInteger) theIndex;
-- (BOOL) isHighlighted:(NSUInteger) theIndex;
+- (BOOL) isMarkedAsFinished:(NSUInteger) theIndex;
 - (NSMutableAttributedString *) updateAttrText:(NSUInteger) theIndex;
+- (NSDictionary *) nsDictionaryCopyofMasterTaskList;
 @end
