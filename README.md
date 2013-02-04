@@ -31,7 +31,10 @@ Tasks for Phase 1 of the class
         NSString to NSAttributedString which as of iOS 6 supports strikethrough,
         text color, and underline natively.  I found this on a few stackOverflow
         posts as I was searching for how to deal with other problems that arose.
-        
+                Step 4: Persistent Storage
+        I used an NSKeyedArchiver to write the master list of TaskObjs to a file.
+        Then with an NSKeyedUnarchiver, I decoded the file and wrote the data
+        to a new Master list.
     
     Task 2
     The application allows users to view and add to a list of bird sightings that
