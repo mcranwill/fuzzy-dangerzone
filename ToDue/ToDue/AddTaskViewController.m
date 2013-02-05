@@ -27,6 +27,7 @@
 - (BOOL) textFieldShouldReturn:(UITextField *) textField {
     if (textField == self.taskText) {
         [textField resignFirstResponder];
+        [self performSegueWithIdentifier:@"ReturnInput" sender:self];
     }
     return YES;
 }

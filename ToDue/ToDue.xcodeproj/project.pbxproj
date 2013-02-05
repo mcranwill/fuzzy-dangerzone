@@ -16,11 +16,11 @@
 		F34C337316BADE6400E78D12 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F34C337216BADE6400E78D12 /* Default.png */; };
 		F34C337516BADE6400E78D12 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F34C337416BADE6400E78D12 /* Default@2x.png */; };
 		F34C337716BADE6400E78D12 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F34C337616BADE6400E78D12 /* Default-568h@2x.png */; };
-		F34C337A16BADE6400E78D12 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F34C337816BADE6400E78D12 /* MainStoryboard.storyboard */; };
 		F34C337D16BADE6400E78D12 /* TaskMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F34C337C16BADE6400E78D12 /* TaskMasterViewController.m */; };
 		F34C338816BADEF300E78D12 /* TaskObj.m in Sources */ = {isa = PBXBuildFile; fileRef = F34C338716BADEF300E78D12 /* TaskObj.m */; };
 		F34C338B16BAE38000E78D12 /* AddTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F34C338A16BAE38000E78D12 /* AddTaskViewController.m */; };
 		F34C338E16BAE9C000E78D12 /* TaskListDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = F34C338D16BAE9C000E78D12 /* TaskListDataController.m */; };
+		F3FB45DE16C1827000B2BF57 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3FB45DC16C1827000B2BF57 /* MainStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +37,6 @@
 		F34C337216BADE6400E78D12 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		F34C337416BADE6400E78D12 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		F34C337616BADE6400E78D12 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		F34C337916BADE6400E78D12 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		F34C337B16BADE6400E78D12 /* TaskMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskMasterViewController.h; sourceTree = "<group>"; };
 		F34C337C16BADE6400E78D12 /* TaskMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaskMasterViewController.m; sourceTree = "<group>"; };
 		F34C338616BADEF300E78D12 /* TaskObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskObj.h; sourceTree = "<group>"; };
@@ -46,6 +45,7 @@
 		F34C338A16BAE38000E78D12 /* AddTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTaskViewController.m; sourceTree = "<group>"; };
 		F34C338C16BAE9C000E78D12 /* TaskListDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskListDataController.h; sourceTree = "<group>"; };
 		F34C338D16BAE9C000E78D12 /* TaskListDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskListDataController.m; sourceTree = "<group>"; };
+		F3FB45DD16C1827000B2BF57 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +98,7 @@
 				F34C338716BADEF300E78D12 /* TaskObj.m */,
 				F34C338C16BAE9C000E78D12 /* TaskListDataController.h */,
 				F34C338D16BAE9C000E78D12 /* TaskListDataController.m */,
-				F34C337816BADE6400E78D12 /* MainStoryboard.storyboard */,
+				F3FB45DC16C1827000B2BF57 /* MainStoryboard.storyboard */,
 				F34C338916BAE38000E78D12 /* AddTaskViewController.h */,
 				F34C338A16BAE38000E78D12 /* AddTaskViewController.m */,
 				F34C337B16BADE6400E78D12 /* TaskMasterViewController.h */,
@@ -178,7 +178,7 @@
 				F34C337316BADE6400E78D12 /* Default.png in Resources */,
 				F34C337516BADE6400E78D12 /* Default@2x.png in Resources */,
 				F34C337716BADE6400E78D12 /* Default-568h@2x.png in Resources */,
-				F34C337A16BADE6400E78D12 /* MainStoryboard.storyboard in Resources */,
+				F3FB45DE16C1827000B2BF57 /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,10 +209,10 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		F34C337816BADE6400E78D12 /* MainStoryboard.storyboard */ = {
+		F3FB45DC16C1827000B2BF57 /* MainStoryboard.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F34C337916BADE6400E78D12 /* en */,
+				F3FB45DD16C1827000B2BF57 /* en */,
 			);
 			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
@@ -311,6 +311,7 @@
 				F34C338516BADE6400E78D12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
