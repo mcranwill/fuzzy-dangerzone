@@ -48,9 +48,10 @@
                                     <constraint firstAttribute="width" constant="177" id="Xr8-J1-1JJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="SZh-a0-m6p" id="0hr-VN-Jte"/>
+                                    <segue destination="pQI-Pa-uYu" kind="unwind" identifier="ReturnInput" unwindAction="done:" id="k2V-j7-KX2"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Your Task" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UHG-bj-oCo">
