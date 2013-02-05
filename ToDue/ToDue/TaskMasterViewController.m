@@ -45,11 +45,15 @@
         
         NSMutableString *temp = [[NSMutableString alloc] init];
         [temp appendString:@"key1"];
+        //NSInteger inde = 0;
         while ([unarchiver containsValueForKey:temp]) {
             TaskObj *temporaryTask =[[TaskObj alloc] init];
             temporaryTask = [unarchiver decodeObjectForKey:temp];
             [self.dataController addTaskWithText:[unarchiver decodeObjectForKey:temp]];
+            
+            //[[self tableView] ];
             [temp appendString:@"1"];
+            //inde++;
         }
     }
 }
@@ -126,7 +130,7 @@
     if([self.dataController isMarkedAsFinished:indexPath.row]){
         cell.accessoryType = UITableViewCellAccessoryNone;
     }else{
-    cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
     }
     NSMutableAttributedString *s =[self.dataController updateAttrText:indexPath.row];
     taskAtIndex.text = s;
@@ -160,6 +164,11 @@
     TaskObj *taskAtIndex = [self.dataController objectInListAtIndex:indexPath.row];
     //[[cell textLabel] setText:taskAtIndex.text.string];
     [[cell textLabel] setAttributedText:taskAtIndex.text];
+    if([self.dataController isMarkedAsFinished:indexPath.row]){
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }else{
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
    // [[cell detailTextLabel] setText:[formatter stringFromDate:(NSDate *)sightingAtIndex.date]];
     return cell;
 }
